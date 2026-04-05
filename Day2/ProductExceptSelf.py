@@ -1,12 +1,14 @@
 def productExceptSelf(nums):
     n=len(nums)
-    result=[0]*n
+    result=[1]*n
+    left=1
     for i in range(n):
-        product=1
-        for j in range(n):
-            if i==j:
-                product*=nums[j]
-        result=product
-        return result
+        result[i]=left
+        left*=nums[i]
+    right=1
+    for i in range(n-1,-1,-1):
+        result[i]*=right
+        right*=nums[i]
+    return result
 nums=[1,2,3,4]
 print(productExceptSelf(nums))
