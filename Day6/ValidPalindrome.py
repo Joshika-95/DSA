@@ -1,0 +1,7 @@
+def is_palindrome(s):
+    s = s.lower().replace(" ", "")
+    return s == s[::-1]
+
+# Example
+print(is_palindrome("madam"))        # True
+print(is_palindrome("hello"))        # False
