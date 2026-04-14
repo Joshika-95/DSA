@@ -1,0 +1,7 @@
+my_set=set()
+my_set.add(5)
+my_set.add(6)
+my_set.add(7)
+print("Before adding membes in set: ",my_set)
+my_set.update([8,9,10])
+print("After adding membes in set: ",my_set)
